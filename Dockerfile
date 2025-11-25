@@ -1,4 +1,7 @@
-FROM openjdk:8
+FROM eclipse-temurin:8-jdk
+
 EXPOSE 8080
+
 ADD target/spring-boot-mysql.jar spring-boot-mysql.jar
-ENTRYPOINT ["java","-jar","/spring-boot-mysql.jar"]
+
+ENTRYPOINT ["java", "-jar", "/spring-boot-mysql.jar"]
